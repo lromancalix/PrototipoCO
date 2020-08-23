@@ -1,0 +1,37 @@
+<mat-toolbar class="mat-elevation-z4 fixed-top">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Créditos</span>
+    <span class="example-spacer"></span>
+  
+    <button mat-button [matMenuTriggerFor]="menu" >Tarjetas de Crédito </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="afterMenu">Préstamos</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Personales</button>
+      <button mat-menu-item>Autos</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="afterMenu">Auto</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Personales</button>
+      <button mat-menu-item>Autos</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="afterMenu">Casa</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Personales</button>
+      <button mat-menu-item>Autos</button>
+    </mat-menu>
+  
+  
+  </mat-toolbar>
+  
