@@ -1,0 +1,70 @@
+
+<div class="content mt-5">
+  <div class="row mt-5 p-5">
+    <div class="col">
+      <h3 class="credit-text-color-primary">Tarjetas de Crédito</h3>
+
+      <!-- INGRESO MENSUAL -->
+      <mat-card class="mb-3">
+        <div class="row">
+          <div class="col-2">
+            <p>
+              Ingreso mensual:
+              <strong class="credit-text-color-second">
+                {{ ingreso | currency: "USD" }}
+              </strong>
+            </p>
+          </div>
+          <div class="col-10">
+            <mat-slider
+              thumbLabel
+              [displayWith]="formatLabel"
+              tickInterval="1000"
+              min="10000"
+              max="30000"
+              class="w-100"
+              (input)="valorSlider($event)"
+            ></mat-slider>
+          </div>
+        </div>
+      </mat-card>
+      <!--/ INGRESO MENSUAL -->
+    </div>
+  </div>
+
+ 
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <app-tarjeta></app-tarjeta>
+        </div>
+    </div>
+</div>
+
+

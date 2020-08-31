@@ -1,42 +1,77 @@
-$credit-color-principal:  #0062E6;;
+$credit-color-principal: #0062e6;
 $credit-color-pricipal-primary: $credit-color-principal;
-$credit-color-pricipal-second:rgba(46, 115, 179, 1); /*Color extraido de la imagen del logo*/
+$credit-color-pricipal-second: rgba(
+  46,
+  115,
+  179,
+  1
+); /*Color extraido de la imagen del logo*/
 $credit-color-pricipal-third: #007bff;
-$credit-color-pricipal-fourt: #33AEFF;
+$credit-color-pricipal-fourt: #33aeff;
 
-
-$credit-color-second: rgba(115, 173, 66, 1); /*Color extraido de la imagen del logo*/
-
-
+$credit-color-second: rgba(
+  115,
+  173,
+  66,
+  1
+); /*Color extraido de la imagen del logo*/
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .btn-credit-principal {
-    background-color: $credit-color-principal !important;
+  background-color: $credit-color-principal !important;
 }
 .btn-credit-second {
-    background-color: $credit-color-second !important;
+  background-color: $credit-color-second !important;
 }
 
 .credit-background-color-primary {
-    background-color: $credit-color-principal;
+  background-color: $credit-color-principal;
 }
 
 .credit-background-color-second {
-    background-color: $credit-color-second;
+  background-color: $credit-color-second;
 }
 
 .credit-text-color-primary {
-    color: $credit-color-principal !important;
+  color: $credit-color-principal !important;
 }
 
 .credit-text-color-second {
-    color: $credit-color-second !important;
+  color: $credit-color-second !important;
 }
 
 .credit-text-color-third {
-    color: $credit-color-pricipal-third !important;
+  color: $credit-color-pricipal-third !important;
+}
+
+.btn-radius-50 {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 18px;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
