@@ -14,6 +14,7 @@ import { ServsComponent } from './pages/home/servs/servs.component';
 import { PrecioComponent } from './pages/home/precio/precio.component';
 import { TarjetacreditoComponent } from './pages/ofertas/tarjetacredito/tarjetacredito.component';
 import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
+import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
     ServsComponent,
     PrecioComponent,
     TarjetacreditoComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    Tarjetav2Component
   ],
   imports: [
     BrowserModule,
