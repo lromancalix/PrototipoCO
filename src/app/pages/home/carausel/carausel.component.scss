@@ -6,3 +6,10 @@ $alto-default: 500px;
 .carousel-item img{
     height: $alto-default;
 }
+
+.sombra-negra {
+    text-shadow: 3px 3px 3px black ;
+}
+.sombra-blanco {
+    text-shadow: 3px 3px 3px white ;
+}
