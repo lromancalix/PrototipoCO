@@ -14,19 +14,19 @@ $alto-default: 500px;
   text-shadow: 3px 3px 3px white;
 }
 
-@media (max-width: 768px) {
-  .d-block {
-    text-align: center;
-    padding-top: 58px;
-  }
+// @media (max-width: 768px) {
+//   .d-block {
+//     text-align: center;
+//     padding-top: 58px;
+//   }
  
-}
+// }
 
-@media (max-height: 500px) {
-  #hero {
-    height: 120vh;
-  }
-}
+// @media (max-height: 500px) {
+//   #hero {
+//     height: 120vh;
+//   }
+// }
 
 
 h2 {

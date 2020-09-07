@@ -1,0 +1,48 @@
+@import "../../../../styles.scss";
+
+h4 {
+    color: white !important;
+    text-shadow: 1px 1px 2px black;;
+}
+
+.counts .count-box {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.06);
+    border-radius: px;
+    background-color: white;
+    border-radius: 8px;;
+  }
+  
+  .counts .count-box i {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: #fff;
+    padding: 10px;
+    color: $credit-color-principal;
+    border-radius: 45%;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    
+  }
+  
+  .counts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 700;
+    color: #111111;
+  }
+  
+  .counts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+  }
+  

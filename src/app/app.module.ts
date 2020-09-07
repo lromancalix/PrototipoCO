@@ -15,6 +15,7 @@ import { PrecioComponent } from './pages/home/precio/precio.component';
 import { TarjetacreditoComponent } from './pages/ofertas/tarjetacredito/tarjetacredito.component';
 import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
 import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.component';
+import { PasosComponent } from './pages/home/pasos/pasos.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.componen
     PrecioComponent,
     TarjetacreditoComponent,
     TarjetaComponent,
-    Tarjetav2Component
+    Tarjetav2Component,
+    PasosComponent
   ],
   imports: [
     BrowserModule,
