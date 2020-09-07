@@ -26,8 +26,10 @@
   transition: all 0.5s ease 0s;
 }
 
+
 .services-details:hover h4,
-.services-details:hover .services-icon {
+.services-details:hover 
+.services-icon  {
   color: $credit-color-second;
 }
 

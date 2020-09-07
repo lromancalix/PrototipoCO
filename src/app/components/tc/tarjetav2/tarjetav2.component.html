@@ -1,5 +1,4 @@
 <br />
-
 <div 
     class="card mb-3 w-100" 
     (mouseover)  = "mouseIsOver = true"
@@ -9,7 +8,7 @@
     <div class="col-lg-3 col-md-3 center">
       <div class="card m-3" style=" border: none !important">
         <img
-          src="assets/img/TC/bancomer/tarjeta-infinite-card.png"
+          [src]="tarjeta.urlImagen"
           class="card-img-top"
           alt="..."
         />
@@ -30,16 +29,12 @@
       </div>
     </div>
     <div class="col-lg-9 col-md-9 col-sm-12 p-5">
-      <h4>Bancomer</h4>
-      <h3>Bancomer Black</h3>
+      <h4>{{ tarjeta.banco }}</h4>
+      <h3>{{ tarjeta.tarjeta }}</h3>
       <p class="font-weight-lighter text-justify font-">
           <small>
           
-          Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero
-          la mayoría sufrió alteraciones en alguna manera, ya sea porque se le
-          agregó humor, o palabras aleatorias que no parecen ni un poco creíbles.
-          Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de
-          que no hay nada avergonzante escondido en el medio del texto.
+      {{tarjeta.descripcion}}
           </small>
       </p>
       <hr />

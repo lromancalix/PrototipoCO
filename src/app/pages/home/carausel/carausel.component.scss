@@ -1,15 +1,76 @@
 $alto-default: 500px;
 
-.carousel-item{
-    height: $alto-default;
-} 
-.carousel-item img{
-    height: $alto-default;
+.carousel-item {
+  height: $alto-default;
+}
+.carousel-item img {
+  height: $alto-default;
 }
 
 .sombra-negra {
-    text-shadow: 3px 3px 3px black ;
+  text-shadow: 3px 3px 3px black;
 }
 .sombra-blanco {
-    text-shadow: 3px 3px 3px white ;
+  text-shadow: 3px 3px 3px white;
+}
+
+@media (max-width: 768px) {
+  .d-block {
+    text-align: center;
+    padding-top: 58px;
+  }
+ 
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 120vh;
+  }
+}
+
+
+h2 {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+.btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #e03a3c;
+  border: 2px solid #e03a3c;
+}
+
+.btn-get-started:hover {
+  background: transparent;
+  border-color: #fff;
+}
+
+.carousel-caption {
+    height: 250px;
+    color: #FFF;
+    font-size: 400%;
+    padding: 20px;
+}
+
+.carousel-caption::before {
+    border-radius: 8px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.3;
 }
