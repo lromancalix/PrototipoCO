@@ -14,12 +14,23 @@ $alto-default: 500px;
   text-shadow: 3px 3px 3px white;
 }
 
+.img-fluid {
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .img-fluid{
+    background-size: cover;
+    width: 100%;
+  }
+}
+
 // @media (max-width: 768px) {
 //   .d-block {
 //     text-align: center;
 //     padding-top: 58px;
 //   }
- 
+
 // }
 
 // @media (max-height: 500px) {
@@ -27,7 +38,6 @@ $alto-default: 500px;
 //     height: 120vh;
 //   }
 // }
-
 
 h2 {
   color: #fff;
@@ -56,21 +66,21 @@ h2 {
 }
 
 .carousel-caption {
-    height: 250px;
-    color: #FFF;
-    font-size: 400%;
-    padding: 20px;
+  height: 250px;
+  color: #fff;
+  font-size: 400%;
+  padding: 20px;
 }
 
 .carousel-caption::before {
-    border-radius: 8px;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: black;
-    opacity: 0.3;
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.3;
 }
