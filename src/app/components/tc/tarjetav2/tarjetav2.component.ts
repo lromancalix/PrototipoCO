@@ -12,7 +12,7 @@ export class Tarjetav2Component implements OnInit {
   urlImagen = 'assets/img/TC/bancomer/tarjeta-infinite-card.png';
 
   @Input()
-  tarjeta: TarjetaModel;
+  tarjeta: any;
 
   mouseIsOver = false;
 

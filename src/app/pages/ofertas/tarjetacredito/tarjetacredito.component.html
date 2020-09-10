@@ -20,8 +20,8 @@
               thumbLabel
               [displayWith]="formatLabel"
               tickInterval="1000"
-              min="10000"
-              max="30000"
+              min="1000"
+              max="50000"
               class="w-100"
               (input)="valorSlider($event)"
             ></mat-slider>
@@ -40,9 +40,9 @@
 
     <div 
       class="col-12" 
-      *ngFor = "let tajeta of arrayTarjetas"
+      *ngFor = "let tajeta of tarjetas"
       >
-      <app-tarjetav2 [tarjeta] ="tajeta"></app-tarjetav2>
+      <app-tarjetav2 [tarjeta] ="tajeta"  ></app-tarjetav2>
     </div>
 
   </div>

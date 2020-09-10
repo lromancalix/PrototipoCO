@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { TarjetaModel } from '../../../models/tc/tarjeta.model';
+import { TarjetaCreditoService } from '../../../services/tarjeta-credito.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tarjetacredito',
@@ -8,48 +10,35 @@ import { TarjetaModel } from '../../../models/tc/tarjeta.model';
 })
 export class TarjetacreditoComponent implements OnInit {
 
-  ingreso = 10000;
+  ingreso = 1000;
   direccion1 = 'assets/img/TC/bancomer/tarjeta-infinite-card.png';
   direccion2 = 'assets/img/TC/banorte/clasica.png';
   direccion3 = 'assets/img/TC/citybanamex/oro1.png';
 
-  arrayTarjetas: TarjetaModel[] = [
-    {
-      banco: 'Bancomer',
-      tarjeta: 'Bancomer Infinite',
-      descripcion: 'Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.',
-      monto: 10000,
-      urlImagen: 'assets/img/TC/bancomer/tarjeta-infinite-card.png'
-    },
-    
-    {
-      banco: 'Banorte',
-      tarjeta: 'Banorte Clásica',
-      descripcion: 'Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.',
-      monto: 10000,
-      urlImagen: 'assets/img/TC/banorte/clasica.png'
-    },
-    
-    {
-      banco: 'CityBanamex',
-      tarjeta: 'Banamex ORO',
-      descripcion: 'Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.',
-      monto: 10000,
-      urlImagen: 'assets/img/TC/citybanamex/oro1.png'
-    },
 
-    {
-      banco: 'Bancomer',
-      tarjeta: 'Bancomer ORO',
-      descripcion: 'Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.',
-      monto: 10000,
-      urlImagen: 'assets/img/TC/bancomer/oro.png'
-    }
+  public tarjetas: any[] = [];
 
-  ];
-  constructor() { }
+  constructor( private tarService: TarjetaCreditoService ) {
+    this.buscarTarjetas();
+   }
 
   ngOnInit() {
+  }
+
+  buscarTarjetas() {
+    Swal.fire({
+      title: 'Espere',
+      text: 'Cargando datos...',
+      icon: 'info',
+      allowOutsideClick: false
+    });
+
+    Swal.showLoading();
+    this.tarService.getTarjetasPromise().then( ( ) => {
+      this.tarjetas = this.tarService.tarjetas;
+      console.log( 'Componente: ', this.tarjetas );
+      Swal.close();
+    } );
   }
 
   formatLabel(value: number) {
@@ -66,6 +55,7 @@ export class TarjetacreditoComponent implements OnInit {
 
   valorSlider( event: any ) {
     this.ingreso = event.value;
+    this.tarjetas = this.tarService.filtrarTarjetas( event.value );
   }
 
 }

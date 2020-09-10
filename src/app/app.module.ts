@@ -16,6 +16,7 @@ import { TarjetacreditoComponent } from './pages/ofertas/tarjetacredito/tarjetac
 import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
 import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.component';
 import { PasosComponent } from './pages/home/pasos/pasos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PasosComponent } from './pages/home/pasos/pasos.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
