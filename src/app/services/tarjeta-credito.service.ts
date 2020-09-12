@@ -11,18 +11,22 @@ export class TarjetaCreditoService {
   public tarjetas: any[] = [];
   private tarjetasOriginal: any[] = [];
 
-  constructor( private http: HttpClient ) {
-
-   }
+  constructor( private http: HttpClient ) { }
 
   getTarjetasPromise() {
     return new Promise( ( resolve, reject ) => {
-      this.getTarjetasFromAPI()
-      .subscribe( (response: any[] ) => {
-        this.tarjetas = response;
-        this.tarjetasOriginal = response;
-        resolve();
-      } );
+
+      setTimeout(() => {
+
+        this.getTarjetasFromAPI()
+        .subscribe( (response: any[] ) => {
+          this.tarjetas = response;
+          this.tarjetasOriginal = response;
+          resolve();
+        } );
+
+      }, 3000);
+
     });
   }
 
