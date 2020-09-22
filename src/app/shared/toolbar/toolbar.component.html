@@ -25,6 +25,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <!-- 1 Tarjetas de Crédito -->
       <li
         class="nav-item dropdown hvr-sweep-to-right"
         mat-ripple
@@ -42,45 +43,9 @@
         >
           Tarjetas de Crédito
         </a>
-        <!-- <div   
-        class="dropdown-menu  animate__animated animate__fadeInDown animate__faster" 
-        aria-labelledby="navbarDropdownMenuLink">
-        <a 
-          matRipple 
-          matRippleCentered = "true"
-          class="dropdown-item" 
-          routerLink = "/tarjetas">Shop credit Card</a>
-        <a 
-          matRipple 
-          matRippleCentered = "true"
-          class="dropdown-item" 
-          href="#">Business card</a>
-        <a 
-          matRipple 
-          matRippleCentered = "true"
-          class="dropdown-item" 
-          href="#">Travel card</a>
-      </div> -->
-      </li>
-      <li mat-ripple matRippleCentered="true" class="nav-item dropdown">
-        <a
-          class="nav-link"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Préstamos Personales
-        </a>
-        <!-- <div class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="navbarDropdownMenuLink">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div> -->
-      </li>
+      </li> <!--/ 1 Tarjetas de Crédito -->
 
+      <!-- 2 Prestamos Personales -->
       <li mat-ripple matRippleCentered="true" class="nav-item dropdown">
         <a
           class="nav-link"
@@ -91,9 +56,11 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Préstamos Hipotecarios
+          Préstamo Personal
         </a>
-      </li>
+      </li> <!--/ 2 Prestamos Personales -->
+
+      <!-- 3 Prestamos Automotriz -->
       <li mat-ripple matRippleCentered="true" class="nav-item dropdown">
         <a
           class="nav-link"
@@ -104,9 +71,50 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Seguro de Auto
+          Préstamo Automotriz
         </a>
-      </li>
+      </li> <!--/ 2 Prestamos Automotriz -->
+
+      <!-- 4 Prestamo Hipotecario -->
+      <li mat-ripple matRippleCentered="true" class="nav-item dropdown">
+        <a
+          class="nav-link"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Préstamo Hipotecario
+        </a>
+      </li><!--/ 4 Prestamo Hipotecario -->
+
+      <!-- 5 Seguros -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Seguros
+        </a>
+        <div
+          class="dropdown-menu animate__animated animate__fadeInUp animate__faster"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <a mat-ripple matRippleCentered="true" class="dropdown-item" href="#"
+            >Seguro de Auto</a
+          >
+          <a mat-ripple matRippleCentered="true" class="dropdown-item" href="#"
+            >Seguro de vida</a
+          >
+        </div>
+      </li> <!-- 5 Seguros -->
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">
@@ -123,7 +131,6 @@
     </form>
   </div>
 </nav>
-
 
 <form>
   <div
@@ -184,7 +191,6 @@
               placeholder=""
             />
           </div>
-          
         </div>
         <div class="modal-footer">
           <button
