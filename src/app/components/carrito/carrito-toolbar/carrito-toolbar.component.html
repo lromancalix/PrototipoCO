@@ -1,0 +1,70 @@
+<form>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown no-arrow">
+      <a
+        class="nav-link dropdown-toggle mx-1 hvr-float"
+        href="#"
+        id="messagesDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="fa fa-shopping-cart fa-fw"></i>
+        <!-- contador de productos en el carrito -->
+        <span
+          *ngIf="mostrarBadgesCarrito"
+          class="badge badge-danger badge-counter"
+          >{{ carritoServ.elementosEnCarrito }}</span
+        >
+      </a>
+      <!-- Dropdown - tarjetas -->
+      <div
+        class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+        aria-labelledby="messagesDropdown"
+      >
+        <h6 class="dropdown-header">Tus Productos</h6>
+      
+       
+       
+        <a
+          *ngFor="let tarjeta of carritoServ.tarjetas"
+          class="dropdown-item d-flex align-items-center"
+          type="button"
+        >
+          <div class="dropdown-list-image mr-3">
+            <img class="rounded-circle" [src]="tarjeta.imagen" alt="" />
+          </div>
+          <div>
+            <div class="text-truncate">{{ tarjeta.nombre }}</div>
+            <!-- <div class="small text-gray-500"> <a href="#"> <i class="fa fa-trash"></i> </a> <a href="#"><i class="fa fa-eye"></i></a></div> -->
+            <div class="text-white-500">
+              <a
+                type="button"
+                (click)="quitarProducto(tarjeta)"
+                class="badge badge-light p-1 text-danger"
+                >Quitar <i class="fa fa-trash"></i>
+              </a>
+              <a class="badge badge-light p-1"
+                >Detalles <i class="fa fa-eye"></i
+              ></a>
+             
+            </div>
+          </div>
+        </a>
+
+        <a
+          *ngIf="carritoServ.elementosEnCarrito > 0"
+          class="dropdown-item dropdown-item-footer text-center text-white background-color-success"
+          routerLink="/personales"
+          >Continuar</a>
+          
+        <a
+          *ngIf="carritoServ.elementosEnCarrito == 0"
+          class="dropdown-item text-center text-black-50"
+          href="#"
+          >No hay elementos en el carrito</a>
+      </div>
+    </li>
+  </ul>
+</form>

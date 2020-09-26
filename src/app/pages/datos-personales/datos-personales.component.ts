@@ -1,0 +1,83 @@
+import { Component, OnInit } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { PersonalesModel } from '../../models/cliente/datos-personales';
+
+@Component({
+  selector: 'app-datos-personales',
+  templateUrl: './datos-personales.component.html',
+  styleUrls: ['./datos-personales.component.scss']
+})
+export class DatosPersonalesComponent implements OnInit {
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+  nombreFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  appFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  apmFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  fechaNacimientoFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  rfcFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  calleFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  numeroFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  coloniaFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  ciudadFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  municipioFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+
+  datosForm: FormGroup;
+  dpersonales: PersonalesModel;
+
+
+  constructor( private fb: FormBuilder ) {
+    this.construirForm();
+   }
+
+  ngOnInit() {
+  }
+
+  get IsNombreValid() {
+    return this.datosForm.get('Nombre').invalid && this.datosForm.get('Nombre').touched;
+  }
+
+
+  construirForm() {
+    this.datosForm = this.fb.group({
+      nombre: [ '' , Validators.required ],
+      app: [ '' , Validators.required],
+      apm: [ '' , [ Validators.required, ] ],
+      correo: [ '', Validators.required ],
+      fechaNacimiento: [ '', Validators.required ],
+      rfc: [ '', Validators.required ],
+      calle: [ '', Validators.required ],
+      numero: [ '', Validators.required ],
+      colonia: [ '', Validators.required ],
+      cp: [ '', Validators.required ],
+      estado: [ '', Validators.required ],
+      ciudad: [ '', Validators.required ],
+      municipio: [ '', Validators.required ],
+      terminos: [ '', Validators.required ]
+    });
+  }
+
+}

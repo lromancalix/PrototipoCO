@@ -19,8 +19,12 @@
             role="group"
             aria-label="Basic example"
           >
-            <button type="button" class="btn btn-success">Agregar</button>
-            <button type="button" class="btn btn-success">Solicitar</button>
+            <button 
+              type="button" 
+              (click) = "agregarAlCarrito(tarjeta)"
+              class="btn btn-success">Agregar al carrito 
+              <i class="fa fa-cart-plus"></i>
+            </button>
           </div>
 
           <button type="button" class="btn btn-link w-100">

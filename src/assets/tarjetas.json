@@ -1,0 +1,96 @@
+{
+  "bancos" : [ {
+    "idBanco" : 1,
+    "nombre" : "Bancomer",
+    "tarjetas" : [ {
+      "caracteristicas" : [ "11% de tus compras en Puntos BBVA", "Realiza operaciones desde la app BBVA México" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 20000,
+      "nombre" : "ORO BBVA",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años" ]
+    }, {
+      "caracteristicas" : [ "15% de tus compras en Puntos BBVA", "Realiza operaciones desde la app BBVA México", "Recibe notificaciones sobre tus movimientos", "Solicita BBVA Wallet y paga seguro en línea" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 25000,
+      "nombre" : "Platino BBVA",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Ingreso mínimo de $25,000" ]
+    } ]
+  }, {
+    "idBanco" : 2,
+    "nombre" : "Banregio",
+    "tarjetas" : [ {
+      "caracteristicas" : [ "Autorización de compras con tu NIP", "Sin anualidad, sin condiciones", "Tarjeta Virtual", "Sin cobro de comisión por no realizar el pago requerido dentro de la fecha límite de pago" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 35000,
+      "nombre" : "Platinum",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años", "$35,000 de ingreso mínimo mensual" ]
+    }, {
+      "caracteristicas" : [ "11% de tus compras en Puntos BBVA", "Realiza operaciones desde la app BBVA México" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 10000,
+      "nombre" : "Banregio",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años", "$10,000 de ingreso mínimo mensual", "Comprobante de domicilio vigente" ]
+    } ]
+  }, {
+    "idBanco" : 3,
+    "nombre" : "Banorte",
+    "tarjetas" : [ {
+      "caracteristicas" : [ "Autorización de compras con tu NIP", "Sin anualidad, sin condiciones", "Tarjeta Virtual", "Sin cobro de comisión por no realizar el pago requerido dentro de la fecha límite de pago" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 15000,
+      "nombre" : "Tarjeta 40",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 19 y 64 años", "$15,000 de ingreso mínimo mensual" ]
+    }, {
+      "caracteristicas" : [ "12 Meses Con Intereses. Aprovecha el nuevo beneficio exclusivo de tu Tarjeta Clásica Banorte y Paga cómodamente a 12 Meses con Intereses con una atractiva tasa interés del 2.08% mensual fija.", "En tu primer día de compras 10 MSI", "Plan de Pagos Fijos" ],
+      "imagen" : "url_imagen",
+      "ingresoMinimo" : 7000,
+      "nombre" : "Banorte Clásica",
+      "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 64 años", "$7,000 de ingreso mínimo mensual", "Comprobante de domicilio vigente" ]
+    } ]
+  } ],
+  "tarjetas" : [ {
+    "banco" : "Bancomer",
+    "caracteristicas" : {
+      "0" : "11% de tus compras en Puntos BBVA",
+      "1" : "Realiza operaciones desde la app BBVA México",
+      "banco" : "Bancomer"
+    },
+    "idBanco" : 1,
+    "imagen" : "assets/img/TC/bancomer/tarjeta-infinite-card.png",
+    "ingresoMinimo" : 2000,
+    "nombre" : "ORO BBVA",
+    "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años" ]
+  }, {
+    "banco" : "Bancomer",
+    "caracteristicas" : [ "15% de tus compras en Puntos BBVA", "Realiza operaciones desde la app BBVA México", "Recibe notificaciones sobre tus movimientos", "Solicita BBVA Wallet y paga seguro en línea" ],
+    "idBanco" : 1,
+    "imagen" : "assets/img/TC/bancomer/oro.png",
+    "ingresoMinimo" : 25000,
+    "nombre" : "Platino BBVA",
+    "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Ingreso mínimo de $25,000" ]
+  }, {
+    "banco" : "Banregio",
+    "caracteristicas" : [ "Autorización de compras con tu NIP", "Sin anualidad, sin condiciones", "Tarjeta Virtual", "Sin cobro de comisión por no realizar el pago requerido dentro de la fecha límite de pago" ],
+    "idBanco" : 2,
+    "imagen" : "assets/img/TC/citybanamex/oro1.png",
+    "ingresoMinimo" : 35000,
+    "nombre" : "Platinum",
+    "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años", "$35,000 de ingreso mínimo mensual" ]
+  }, {
+    "banco" : "Banregio",
+    "caracteristicas" : [ "11% de tus compras en Puntos BBVA", "Realiza operaciones desde la app BBVA México" ],
+    "idBanco" : 2,
+    "imagen" : "assets/img/TC/bancomer/oro.png",
+    "ingresoMinimo" : 10000,
+    "nombre" : "Banregio",
+    "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 80 años", "$10,000 de ingreso mínimo mensual", "Comprobante de domicilio vigente" ]
+  }, {
+    "Banco" : "Banorte",
+    "caracteristicas" : [ "12 Meses Con Intereses. Aprovecha el nuevo beneficio exclusivo de tu Tarjeta Clásica Banorte y Paga cómodamente a 12 Meses con Intereses con una atractiva tasa interés del 2.08% mensual fija.", "En tu primer día de compras 10 MSI", "Plan de Pagos Fijos" ],
+    "idBanco" : 3,
+    "imagen" : "assets/img/TC/banorte/clasica.png",
+    "ingresoMinimo" : 7000,
+    "nombre" : "Banorte Clásica",
+    "requisitos" : [ "Persona Física y uso personal de Persona Física con Actividad Empresarial", "Edad entre 18 y 64 años", "$7,000 de ingreso mínimo mensual", "Comprobante de domicilio vigente" ]
+  } ]
+}

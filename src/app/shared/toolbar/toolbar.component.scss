@@ -8,7 +8,7 @@
 }
 
 /* Sweep To Right */
-.nav-link {
+.nav-link-hover {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -20,7 +20,7 @@
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
   }
-  .nav-link:before {
+  .nav-link-hover:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -40,10 +40,38 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .nav-link:hover, .nav-link:focus, .nav-link:active {
+  .nav-link-hover:hover, .nav-link-hover:focus, .nav-link-hover:active {
     color: white !important;
   }
-  .nav-link:hover:before, .nav-link:focus:before, .nav-link:active:before {
+  .nav-link-hover:hover:before, .nav-link-hover:focus:before, .nav-link-hover:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+
+  // .badges-circle {
+	// 	background-color: red;
+	// 	color: yellow;
+	// 	font-weight: bold;
+	// 	border-radius: 25px;
+	// 	padding: 5px 10px;
+	// 	left: 5px;
+	// 	bottom: 5px;
+	// 	top: auto;
+  // }
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover, .nav-link:focus {
+    text-decoration: none;
+  }
+  
+  .nav-link.disabled {
+    color: #858796;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  

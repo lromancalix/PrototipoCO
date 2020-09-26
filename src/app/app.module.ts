@@ -17,6 +17,10 @@ import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
 import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.component';
 import { PasosComponent } from './pages/home/pasos/pasos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SeccionSeguridadComponent } from './pages/home/seccion-seguridad/seccion-seguridad.component';
+import { CarritoToolbarComponent } from './components/carrito/carrito-toolbar/carrito-toolbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +35,19 @@ import { HttpClientModule } from '@angular/common/http';
     TarjetacreditoComponent,
     TarjetaComponent,
     Tarjetav2Component,
-    PasosComponent
+    PasosComponent,
+    SeccionSeguridadComponent,
+    CarritoToolbarComponent,
+    DatosPersonalesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

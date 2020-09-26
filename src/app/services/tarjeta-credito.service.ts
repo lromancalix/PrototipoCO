@@ -34,6 +34,9 @@ export class TarjetaCreditoService {
     return this.http.get<any[]>(`${ environment.urlService }/tarjetas.json`);
   }
 
+
+
+
   filtrarTarjetas(ingreso: number) {
 
     if ( ingreso === 1000 ) {

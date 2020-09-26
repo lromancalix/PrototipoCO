@@ -1,7 +1,7 @@
-export class TarjetaModel {
+export class TarjetaCarritoModel {
+    idTarjeta: number;
     banco: string;
     tarjeta: string;
     descripcion: string;
-    monto: number; //monto mínimo mensual
     urlImagen: string;
 }
