@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { PersonalesModel } from '../../models/cliente/datos-personales';
+import { MatAccordion, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material';
+
+// Declaramos las variables para jQuery
+declare var jQuery: any;
+declare var $: any;
+
 
 @Component({
   selector: 'app-datos-personales',
@@ -9,6 +15,15 @@ import { PersonalesModel } from '../../models/cliente/datos-personales';
   styleUrls: ['./datos-personales.component.scss']
 })
 export class DatosPersonalesComponent implements OnInit {
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+
+  @ViewChild('modalPago', {static: false}) modalPago: TemplateRef<any>;
+
+  accordion: MatAccordion;
+  panelOpenState = false;
+  step = 0;
 
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -47,7 +62,7 @@ export class DatosPersonalesComponent implements OnInit {
 
   datosForm: FormGroup;
   dpersonales: PersonalesModel;
-
+ 
 
   constructor( private fb: FormBuilder ) {
     this.construirForm();
@@ -79,5 +94,29 @@ export class DatosPersonalesComponent implements OnInit {
       terminos: [ '', Validators.required ]
     });
   }
+
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
+  }
+
+  abrirModal() {
+    console.log('click');
+    
+    $('#miModal').modal('show');
+  }
+
+
+
+
+
 
 }

@@ -25,7 +25,7 @@ export class TarjetaCreditoService {
           resolve();
         } );
 
-      }, 3000);
+      }, 1000);
 
     });
   }

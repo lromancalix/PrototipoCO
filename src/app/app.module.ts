@@ -21,6 +21,7 @@ import { SeccionSeguridadComponent } from './pages/home/seccion-seguridad/seccio
 import { CarritoToolbarComponent } from './components/carrito/carrito-toolbar/carrito-toolbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
+import { CarritoListaComponent } from './components/carrito/carrito-lista/carrito-lista.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DatosPersonalesComponent } from './pages/datos-personales/datos-persona
     PasosComponent,
     SeccionSeguridadComponent,
     CarritoToolbarComponent,
-    DatosPersonalesComponent
+    DatosPersonalesComponent,
+    CarritoListaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,268 +1,331 @@
 <br />
-<section class="container mt-5">
+<section class="container mt-5 animate__animated animate__fadeInDown">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-7">
       <div class="card shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card-body">
-          <h5 class="card-title">Datos Personales</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Ingresa los datos solicitados y de click en continuar.
-          </h6>
-          <hr />
+          <div class="datos-personales">
+            <h5 class="card-title">Datos Personales</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Ingresa los datos solicitados y de click en continuar.
+            </h6>
+            <hr />
 
-          <form class="mt-3" [formGroup]="datosForm">
-            <div class="form-group">
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input
-                  matInput
-                  [formControl]="emailFormControl"
-                  placeholder="Ej. micorreo@correo.com"
-                />
-                <mat-error
-                  *ngIf="
-                    emailFormControl.hasError('email') &&
-                    !emailFormControl.hasError('required')
-                  "
-                >
-                  Please enter a valid email address
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                  El email es <strong>requerido</strong>
-                </mat-error>
-              </mat-form-field>
-            </div>
+            <form class="mt-3" [formGroup]="datosForm">
+              <div class="form-group">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input
+                    matInput
+                    [formControl]="emailFormControl"
+                    placeholder="Ej. micorreo@correo.com"
+                  />
+                  <mat-error
+                    *ngIf="
+                      emailFormControl.hasError('email') &&
+                      !emailFormControl.hasError('required')
+                    "
+                  >
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    El email es <strong>requerido</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
 
-            <div class="form-group">
-              <mat-form-field class="example-full-width">
-                <mat-label>Nombre (s)</mat-label>
-                <input
-                  matInput
-                  [formControl]="nombreFormControl"
-                  placeholder="Ex. pat@example.com"
-                />
+              <div class="form-group">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Nombre (s)</mat-label>
+                  <input
+                    matInput
+                    [formControl]="nombreFormControl"
+                    placeholder="Ex. pat@example.com"
+                  />
 
-                <mat-error *ngIf="nombreFormControl.hasError('required')">
-                  El nombre <strong>es requerido</strong>
-                </mat-error>
-              </mat-form-field>
-            </div>
+                  <mat-error *ngIf="nombreFormControl.hasError('required')">
+                    El nombre <strong>es requerido</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <div class="form-group">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <div class="form-group">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Apellido paterno</mat-label>
+                      <input
+                        matInput
+                        [formControl]="appFormControl"
+                        placeholder="Apellido Paterno"
+                      />
+
+                      <mat-error *ngIf="appFormControl.hasError('required')">
+                        El apellido paterno <strong>es requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
                   <mat-form-field class="example-full-width">
-                    <mat-label>Apellido paterno</mat-label>
+                    <mat-label>Apellido materno</mat-label>
                     <input
                       matInput
-                      [formControl]="appFormControl"
-                      placeholder="Apellido Paterno"
+                      [formControl]="apmFormControl"
+                      placeholder="Apellido Materno"
                     />
 
-                    <mat-error *ngIf="appFormControl.hasError('required')">
-                      El apellido paterno <strong>es requerido</strong>
+                    <mat-error *ngIf="apmFormControl.hasError('required')">
+                      El apellido materno <strong>es requerido</strong>
                     </mat-error>
                   </mat-form-field>
                 </div>
               </div>
-              <div class="form-group col-md-6">
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <div class="form-group">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Fecha de nacimiento</mat-label>
+                      <input
+                        matInput
+                        [formControl]="fechaNacimientoFormControl"
+                        placeholder="01/01/1990"
+                      />
+
+                      <mat-error
+                        *ngIf="fechaNacimientoFormControl.hasError('required')"
+                      >
+                        La fecha de naciemiento <strong>es requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>RFC</mat-label>
+                    <input
+                      matInput
+                      [formControl]="rfcFormControl"
+                      placeholder="RFC"
+                    />
+
+                    <mat-error *ngIf="rfcFormControl.hasError('required')">
+                      El RFC <strong>es requerido</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
                 <mat-form-field class="example-full-width">
-                  <mat-label>Apellido materno</mat-label>
+                  <mat-label>Calle</mat-label>
                   <input
                     matInput
-                    [formControl]="apmFormControl"
-                    placeholder="Apellido Materno"
+                    [formControl]="calleFormControl"
+                    placeholder="Calle"
                   />
 
-                  <mat-error *ngIf="apmFormControl.hasError('required')">
-                    El apellido materno <strong>es requerido</strong>
+                  <mat-error *ngIf="calleFormControl.hasError('required')">
+                    La calle <strong>es requerido</strong>
                   </mat-error>
                 </mat-form-field>
               </div>
-            </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <div class="form-group">
+              <!--numero-->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <div class="form-group">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Numero de casa</mat-label>
+                      <input
+                        matInput
+                        [formControl]="numeroFormControl"
+                        placeholder="6 interior C"
+                      />
+
+                      <mat-error *ngIf="numeroFormControl.hasError('required')">
+                        El numero de casa <strong>es requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
                   <mat-form-field class="example-full-width">
-                    <mat-label>Fecha de nacimiento</mat-label>
+                    <mat-label>Colonia</mat-label>
                     <input
                       matInput
-                      [formControl]="fechaNacimientoFormControl"
-                      placeholder="01/01/1990"
+                      [formControl]="coloniaFormControl"
+                      placeholder="Colonia"
+                    />
+
+                    <mat-error *ngIf="coloniaFormControl.hasError('required')">
+                      La colonia <strong>es requerido</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Ciudad</mat-label>
+                    <input
+                      matInput
+                      [formControl]="ciudadFormControl"
+                      placeholder="Ciudad"
+                    />
+
+                    <mat-error *ngIf="ciudadFormControl.hasError('required')">
+                      La ciudad <strong>es requerida</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Municipio</mat-label>
+                    <input
+                      matInput
+                      [formControl]="municipioFormControl"
+                      placeholder="Municipio"
                     />
 
                     <mat-error
-                      *ngIf="fechaNacimientoFormControl.hasError('required')"
+                      *ngIf="municipioFormControl.hasError('required')"
                     >
-                      La fecha de naciemiento <strong>es requerido</strong>
-                    </mat-error>
-                  </mat-form-field>
-                </div>
-              </div>
-              <div class="form-group col-md-6">
-                <mat-form-field class="example-full-width">
-                  <mat-label>RFC</mat-label>
-                  <input
-                    matInput
-                    [formControl]="rfcFormControl"
-                    placeholder="RFC"
-                  />
-
-                  <mat-error *ngIf="rfcFormControl.hasError('required')">
-                    El RFC <strong>es requerido</strong>
-                  </mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <mat-form-field class="example-full-width">
-                <mat-label>Calle</mat-label>
-                <input
-                  matInput
-                  [formControl]="calleFormControl"
-                  placeholder="Calle"
-                />
-
-                <mat-error *ngIf="calleFormControl.hasError('required')">
-                  La calle <strong>es requerido</strong>
-                </mat-error>
-              </mat-form-field>
-            </div>
-
-            <!--numero-->
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <div class="form-group">
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Numero de casa</mat-label>
-                    <input
-                      matInput
-                      [formControl]="numeroFormControl"
-                      placeholder="6 interior C"
-                    />
-
-                    <mat-error *ngIf="numeroFormControl.hasError('required')">
-                      El numero de casa <strong>es requerido</strong>
+                      El municipio <strong>es requerido</strong>
                     </mat-error>
                   </mat-form-field>
                 </div>
               </div>
 
-              <div class="form-group col-md-6">
-                <mat-form-field class="example-full-width">
-                  <mat-label>Colonia</mat-label>
+              <div class="form-group">
+                <div class="form-check">
                   <input
-                    matInput
-                    [formControl]="coloniaFormControl"
-                    placeholder="Colonia"
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
                   />
-
-                  <mat-error *ngIf="coloniaFormControl.hasError('required')">
-                    La colonia <strong>es requerido</strong>
-                  </mat-error>
-                </mat-form-field>
+                  <label class="form-check-label" for="gridCheck">
+                    Acepto terminos y condiciones
+                  </label>
+                </div>
               </div>
-            </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <mat-form-field class="example-full-width">
-                  <mat-label>Ciudad</mat-label>
-                  <input
-                    matInput
-                    [formControl]="ciudadFormControl"
-                    placeholder="Ciudad"
-                  />
-
-                  <mat-error *ngIf="ciudadFormControl.hasError('required')">
-                    La ciudad <strong>es requerida</strong>
-                  </mat-error>
-                </mat-form-field>
-              </div>
-              <div class="form-group col-md-6">
-                <mat-form-field class="example-full-width">
-                  <mat-label>Municipio</mat-label>
-                  <input
-                    matInput
-                    [formControl]="municipioFormControl"
-                    placeholder="Municipio"
-                  />
-
-                  <mat-error *ngIf="municipioFormControl.hasError('required')">
-                    El municipio <strong>es requerido</strong>
-                  </mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="gridCheck"
-                />
-                <label class="form-check-label" for="gridCheck">
-                  Acepto terminos y condiciones
-                </label>
-              </div>
-            </div>
-
-            <br />
-            <button
-              type="submit"
-              class="btn btn-success"
-              style="width: 100% !important"
-            >
-              Continuar
-            </button>
-          </form>
+              <br />
+              <button
+                type="submit"
+                class="btn btn-success"
+                style="width: 100% !important"
+                (click)="abrirModal()"
+              >
+                Continuar
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="col-md-5">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded" >
         <div class="card-body">
           <h5 class="card-title">Productos en el carrito</h5>
           <h6 class="card-subtitle mb-2 text-muted">
             Puedes modificar los elementos del carrito.
           </h6>
           <hr />
-          <div class="media">
-            <img class="align-self-start mr-3" src="./assets/img/TC/bancomer/oro.png" alt="Suresh Dasari" style="width:80px;">
-            <div class="media-body">
-                <h5>Bancomer Oro</h5>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-            </div>
-        </div>
-        <hr />
-        <div class="media">
-            <img class="align-self-center mr-3" src="/images/defaultimg.png" alt="Suresh Dasari" style="width:80px;">
-            <div class="media-body">
-                <h5>Suresh Dasari<small><i> Posted on January 15, 2020</i></small></h5>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-            </div>
-        </div>
-        <hr />
-        <div class="media">
-            <img class="align-self-end mr-3" src="/images/defaultimg.png" alt="Suresh Dasari" style="width:80px;">
-            <div class="media-body">
-                <h5>Suresh Dasari<small><i> Posted on January 15, 2020</i></small></h5>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-                <p>Nice tutorial on bootstrap. Every bootstrap topic covered in-detail with examples.</p>
-            </div>
-        </div>
 
+          <app-carrito-lista></app-carrito-lista>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<!-- Modal -->
+<div id="miModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Contenido del modal -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Pago con tarjeta</h3>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="credit-card-div">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-md-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Número de tarjeta"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <span class="help-block text-muted small-font">
+                    Mes de expiración</span
+                  >
+                  <input type="text" class="form-control" placeholder="MM" />
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <span class="help-block text-muted small-font">
+                    Año de expiración</span
+                  >
+                  <input type="text" class="form-control" placeholder="YY" />
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <span class="help-block text-muted small-font"> CCV</span>
+                  <input type="text" class="form-control" placeholder="CCV" />
+                </div>
+                <!-- <div class="col-md-3 col-sm-3 col-xs-3 text-center">
+                  <img src="./assets/img/icons/credit-card.png" width="70px" class="img-rounded" />
+  
+                </div> -->
+              </div>
+              <div class="row">
+                <div class="col-md-12 pad-adjust">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre en la tarjeta"
+                  />
+                </div>
+              </div>
+              <!-- <div class="row">
+                <div class="col-md-12 pad-adjust">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked class="text-muted" /> Save
+                      details for fast payments <a href="#"> learn how ?</a>
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+             
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+
+            <div class="btn-group" role="group" aria-label="Basic example" style="width: 100% !important;">
+              <button type="button" class="btn btn-danger">Cancelar</button>
+              <button type="button" class="btn btn-warning">Pagar ahora <i class="fa fa-credit-card"></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

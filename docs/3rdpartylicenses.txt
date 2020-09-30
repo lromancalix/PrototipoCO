@@ -89,7 +89,11 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/datepicker
+
 @angular/material/dialog
+
+@angular/material/expansion
 
 @angular/material/form-field
 
