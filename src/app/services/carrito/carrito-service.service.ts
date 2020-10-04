@@ -7,6 +7,7 @@ import { TarjetaCarritoModel } from '../../models/tc/tarjeta.carrito.model';
 export class CarritoService {
 
   tarjetas: any[] = [];
+  costoTarjeta = 150;
 
   constructor() { }
 
@@ -27,6 +28,10 @@ export class CarritoService {
 
   get elementosEnCarrito() {
     return this.tarjetas.length;
+  }
+
+  get costoTotal() {
+    return this.elementosEnCarrito * this.costoTarjeta;
   }
 
 }

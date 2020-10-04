@@ -229,10 +229,10 @@
 
           <!-- Cobros con tarjetas-->
           <div *ngIf="mostrarCobro">
-            <app-pagotarjeta 
-              [mostrarCobro] = "mostrarCobro" 
-              (cobroCerrado) = "mostrarCobro = false"
-              ></app-pagotarjeta>
+            <app-pagotarjeta
+              [mostrarCobro]="mostrarCobro"
+              (cobroCerrado)="mostrarCobro = false"
+            ></app-pagotarjeta>
           </div>
           <!--/  Cobros con tarjetas-->
         </div>
@@ -249,6 +249,10 @@
           <hr />
 
           <app-carrito-lista></app-carrito-lista>
+        </div>
+        <div class="card-footer text-muted text-right">
+          <p>Total:</p>
+          <h5 class="text-success "> {{ carritoServ.costoTotal | currency: 'USD' }} </h5>
         </div>
       </div>
     </div>

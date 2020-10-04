@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { CarritoService } from '../../../services/carrito/carrito-service.service';
 
 @Component({
   selector: 'app-pagotarjeta',
@@ -15,7 +16,7 @@ export class PagotarjetaComponent implements OnInit {
   cobroCerrado = new EventEmitter<boolean>();
 
 
-  constructor( ) { }
+  constructor( public carritoServ: CarritoService ) { }
 
   ngOnInit() {
   }

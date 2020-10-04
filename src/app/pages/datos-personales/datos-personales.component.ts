@@ -3,6 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { PersonalesModel } from '../../models/cliente/datos-personales';
 import { MatAccordion, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material';
+import { CarritoService } from '../../services/carrito/carrito-service.service';
 
 // Declaramos las variables para jQuery
 declare var jQuery: any;
@@ -68,7 +69,7 @@ export class DatosPersonalesComponent implements OnInit {
  
   /**** FIN Inicialización de variables ****/
 
-  constructor( private fb: FormBuilder ) {
+  constructor( private fb: FormBuilder, public carritoServ: CarritoService ) {
     this.construirForm();
    }
 

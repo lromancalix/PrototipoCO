@@ -1,52 +1,60 @@
 <mat-accordion class="example-headers-align">
+  <mat-expansion-panel
+    *ngFor="let tarjeta of carritoServ.tarjetas; index as i"
+    [expanded]="step === i"
+    (opened)="setStep(i)"
+    hideToggle
+  >
+    <mat-expansion-panel-header style="border-bottom: gray 3px !important">
+      <mat-panel-title>
+        {{ tarjeta.nombre }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ tarjeta.banco }}
+        <img [src]="tarjeta.imagen" class="ml-3" alt="..." width="50px" />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
-
-
-    <mat-expansion-panel *ngFor = "let tarjeta of carritoServ.tarjetas; index as i" [expanded]="step === i" (opened)="setStep(i)" hideToggle>
-      <mat-expansion-panel-header style="border-bottom: gray 3px !important;">
-        <mat-panel-title>
-          {{ tarjeta.nombre }}
-        </mat-panel-title>
-        <mat-panel-description >
-          {{ tarjeta.banco }}
-          <img  [src]="tarjeta.imagen" class="ml-3" alt="..." width="50px">
-
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-  
-      <ul class="text-muted">
-        <li>
-          <i class="fa fa-check credit-text-color-second"></i>
-          <small> Paga en miles de comercios en todo el mundo</small>
-        </li>
-        <li>
-          <i class="fa fa-check credit-text-color-second"></i>
-          <small> El 9% de tus compras en Puntos BBVA</small>
-        </li>
-        <li>
-            <i class="fa fa-check credit-text-color-second"></i>
-            <small> Paga en miles de comercios en todo el mundo</small>
-          </li>
-          <li>
-            <i class="fa fa-check credit-text-color-second"></i>
-            <small> El 9% de tus compras en Puntos BBVA</small>
-          </li>
-      </ul>
-      <mat-action-row>
-        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-            <button 
-                type="button" 
-                (click)="quitarProducto(tarjeta)"
-                class="btn btn-danger"><i class="fa fa-trash"></i></button>
-            <button 
-                *ngIf ="i < carritoServ.elementosEnCarrito - 1" 
-                type="button" 
-                class="btn btn-success" 
-                (click)="nextStep()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
-          </div>
-      </mat-action-row>
-    </mat-expansion-panel>
-  
-  
-  </mat-accordion>
-  
+    <ul class="text-muted">
+      <li>
+        <i class="fa fa-check credit-text-color-second"></i>
+        <small> Paga en miles de comercios en todo el mundo</small>
+      </li>
+      <li>
+        <i class="fa fa-check credit-text-color-second"></i>
+        <small> El 9% de tus compras en Puntos BBVA</small>
+      </li>
+      <li>
+        <i class="fa fa-check credit-text-color-second"></i>
+        <small> Paga en miles de comercios en todo el mundo</small>
+      </li>
+      <li>
+        <i class="fa fa-check credit-text-color-second"></i>
+        <small> El 9% de tus compras en Puntos BBVA</small>
+      </li>
+    </ul>
+    <mat-action-row>
+      <div
+        class="btn-group btn-group-sm"
+        role="group"
+        aria-label="Basic example"
+      >
+        <button
+          type="button"
+          (click)="quitarProducto(tarjeta)"
+          class="btn btn-danger"
+        >
+          <i class="fa fa-trash"></i>
+        </button>
+        <button
+          *ngIf="i < carritoServ.elementosEnCarrito - 1"
+          type="button"
+          class="btn btn-success"
+          (click)="nextStep()"
+        >
+          <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

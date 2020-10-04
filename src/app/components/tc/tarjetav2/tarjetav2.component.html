@@ -1,4 +1,6 @@
-<div class="card animate__animated animate__fadeInDown animate__faster" style="width: 18rem">
+<div 
+  class="card mb-5 shadow-lg animate__animated animate__fadeInDown animate__faster" 
+  style="width: 18rem">
   <img [src]="tarjeta.imagen" class="card-img-top" alt="..." />
   <div class="card-body">
     <h5 class="card-title">{{ tarjeta.banco }}</h5>
@@ -7,10 +9,8 @@
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </p>
-  </div>
- 
-  <div class="card-body">
-    <ul class="list-group list-group-flush m-4">
+  
+    <ul class="list-group list-group-flush">
       <li>
         <i class="fa fa-check credit-text-color-second"></i>
         <small> Paga en miles de comercios en todo el mundo</small>
@@ -31,15 +31,12 @@
   </div>
 
   <div class="card-footer">
-    <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-      <!-- <button type="button" class="btn btn-info ripple">Solicitar</button> -->
-      <button 
+    <button 
         type="button"
         (click) = "agregarAlCarrito(tarjeta)" 
         class="btn btn-success">
         Agregar al carrito 
               <i class="fa fa-cart-plus"></i>
       </button>
-    </div>
   </div>
 </div>
