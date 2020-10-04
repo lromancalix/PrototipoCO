@@ -13,7 +13,6 @@ import { AboutComponent } from './pages/home/about/about.component';
 import { ServsComponent } from './pages/home/servs/servs.component';
 import { PrecioComponent } from './pages/home/precio/precio.component';
 import { TarjetacreditoComponent } from './pages/ofertas/tarjetacredito/tarjetacredito.component';
-import { TarjetaComponent } from './components/tc/tarjeta/tarjeta.component';
 import { Tarjetav2Component } from './components/tc/tarjetav2/tarjetav2.component';
 import { PasosComponent } from './pages/home/pasos/pasos.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +24,7 @@ import { CarritoListaComponent } from './components/carrito/carrito-lista/carrit
 import { PaypalComponent } from './components/pago/paypal/paypal.component';
 import { PagotarjetaComponent } from './components/pago/pagotarjeta/pagotarjeta.component';
 import { AgradecimientoComponent } from './pages/agradecimiento/agradecimiento.component';
+import { TarjetaCobroComponent } from './components/pago/tarjeta/tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,6 @@ import { AgradecimientoComponent } from './pages/agradecimiento/agradecimiento.c
     ServsComponent,
     PrecioComponent,
     TarjetacreditoComponent,
-    TarjetaComponent,
     Tarjetav2Component,
     PasosComponent,
     SeccionSeguridadComponent,
@@ -46,7 +45,8 @@ import { AgradecimientoComponent } from './pages/agradecimiento/agradecimiento.c
     CarritoListaComponent,
     PaypalComponent,
     PagotarjetaComponent,
-    AgradecimientoComponent
+    AgradecimientoComponent,
+    TarjetaCobroComponent
   ],
   imports: [
     BrowserModule,

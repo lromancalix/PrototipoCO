@@ -4462,7 +4462,7 @@
     padding-bottom: 0.5rem;
   }
   
-  .navbar-collapse {
+  /* .navbar-collapse {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     -webkit-box-flex: 1;
@@ -4472,7 +4472,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
-  
+   */
   .navbar-toggler {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;

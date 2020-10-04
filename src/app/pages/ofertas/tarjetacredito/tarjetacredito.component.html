@@ -41,8 +41,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12" *ngFor="let tajeta of tarjetas">
-      <app-tarjetav2 [tarjeta]="tajeta"></app-tarjetav2>
+    <div class="col-4" *ngFor="let tarjeta of tarjetas">
+      <app-tarjetav2 [tarjeta]="tarjeta"></app-tarjetav2>
+      <!-- <app-tarjeta [tarjeta]="tarjeta"></app-tarjeta> -->
     </div>
   </div>
 </div>
