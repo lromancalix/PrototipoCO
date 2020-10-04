@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
 import { TarjetacreditoComponent } from './pages/ofertas/tarjetacredito/tarjetacredito.component';
 import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
+import { AgradecimientoComponent } from './pages/agradecimiento/agradecimiento.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'personales',
     component: DatosPersonalesComponent
+  },
+  {
+    path: 'agradecimiento',
+    component: AgradecimientoComponent
   },
   {
     path: '**',

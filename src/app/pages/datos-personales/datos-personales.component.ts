@@ -16,6 +16,7 @@ declare var $: any;
 })
 export class DatosPersonalesComponent implements OnInit {
 
+  /**** Inicialización de variables ****/
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
@@ -62,7 +63,10 @@ export class DatosPersonalesComponent implements OnInit {
 
   datosForm: FormGroup;
   dpersonales: PersonalesModel;
+
+  mostrarCobro = false;
  
+  /**** FIN Inicialización de variables ****/
 
   constructor( private fb: FormBuilder ) {
     this.construirForm();
@@ -109,14 +113,11 @@ export class DatosPersonalesComponent implements OnInit {
   }
 
   abrirModal() {
-    console.log('click');
-    
     $('#miModal').modal('show');
   }
 
-
-
-
-
+  continuar() {
+    this.mostrarCobro = true;
+  }
 
 }

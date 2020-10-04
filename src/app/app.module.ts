@@ -22,6 +22,9 @@ import { CarritoToolbarComponent } from './components/carrito/carrito-toolbar/ca
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
 import { CarritoListaComponent } from './components/carrito/carrito-lista/carrito-lista.component';
+import { PaypalComponent } from './components/pago/paypal/paypal.component';
+import { PagotarjetaComponent } from './components/pago/pagotarjeta/pagotarjeta.component';
+import { AgradecimientoComponent } from './pages/agradecimiento/agradecimiento.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { CarritoListaComponent } from './components/carrito/carrito-lista/carrit
     SeccionSeguridadComponent,
     CarritoToolbarComponent,
     DatosPersonalesComponent,
-    CarritoListaComponent
+    CarritoListaComponent,
+    PaypalComponent,
+    PagotarjetaComponent,
+    AgradecimientoComponent
   ],
   imports: [
     BrowserModule,

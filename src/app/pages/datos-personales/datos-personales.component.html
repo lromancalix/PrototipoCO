@@ -4,7 +4,8 @@
     <div class="col-md-7">
       <div class="card shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card-body">
-          <div class="datos-personales">
+          <!-- Datos personales-->
+          <div *ngIf="!mostrarCobro" class="datos-personales">
             <h5 class="card-title">Datos Personales</h5>
             <h6 class="card-subtitle mb-2 text-muted">
               Ingresa los datos solicitados y de click en continuar.
@@ -218,18 +219,28 @@
                 type="submit"
                 class="btn btn-success"
                 style="width: 100% !important"
-                (click)="abrirModal()"
+                (click)="continuar()"
               >
                 Continuar
               </button>
             </form>
           </div>
+          <!--/ Datos personales-->
+
+          <!-- Cobros con tarjetas-->
+          <div *ngIf="mostrarCobro">
+            <app-pagotarjeta 
+              [mostrarCobro] = "mostrarCobro" 
+              (cobroCerrado) = "mostrarCobro = false"
+              ></app-pagotarjeta>
+          </div>
+          <!--/  Cobros con tarjetas-->
         </div>
       </div>
     </div>
 
     <div class="col-md-5">
-      <div class="card shadow-lg p-3 mb-5 bg-white rounded" >
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card-body">
           <h5 class="card-title">Productos en el carrito</h5>
           <h6 class="card-subtitle mb-2 text-muted">
@@ -259,71 +270,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="#" class="credit-card-div">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <div class="row">
-                <div class="col-md-12">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Número de tarjeta"
-                  />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                  <span class="help-block text-muted small-font">
-                    Mes de expiración</span
-                  >
-                  <input type="text" class="form-control" placeholder="MM" />
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                  <span class="help-block text-muted small-font">
-                    Año de expiración</span
-                  >
-                  <input type="text" class="form-control" placeholder="YY" />
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                  <span class="help-block text-muted small-font"> CCV</span>
-                  <input type="text" class="form-control" placeholder="CCV" />
-                </div>
-                <!-- <div class="col-md-3 col-sm-3 col-xs-3 text-center">
-                  <img src="./assets/img/icons/credit-card.png" width="70px" class="img-rounded" />
-  
-                </div> -->
-              </div>
-              <div class="row">
-                <div class="col-md-12 pad-adjust">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nombre en la tarjeta"
-                  />
-                </div>
-              </div>
-              <!-- <div class="row">
-                <div class="col-md-12 pad-adjust">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" checked class="text-muted" /> Save
-                      details for fast payments <a href="#"> learn how ?</a>
-                    </label>
-                  </div>
-                </div>
-              </div> -->
-             
-            </div>
-          </div>
-        </form>
+        <app-pagotarjeta></app-pagotarjeta>
       </div>
       <div class="modal-footer">
         <div class="row">
-
-            <div class="btn-group" role="group" aria-label="Basic example" style="width: 100% !important;">
-              <button type="button" class="btn btn-danger">Cancelar</button>
-              <button type="button" class="btn btn-warning">Pagar ahora <i class="fa fa-credit-card"></i></button>
-            </div>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic example"
+            style="width: 100% !important"
+          >
+            <button type="button" class="btn btn-danger">Cancelar</button>
+            <button type="button" class="btn btn-warning">
+              Pagar ahora <i class="fa fa-credit-card"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
