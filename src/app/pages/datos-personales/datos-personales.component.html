@@ -86,7 +86,7 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <div class="form-group">
-                    <mat-form-field class="example-full-width">
+                    <!-- <mat-form-field class="example-full-width">
                       <mat-label>Fecha de nacimiento</mat-label>
                       <input
                         matInput
@@ -99,7 +99,16 @@
                       >
                         La fecha de naciemiento <strong>es requerido</strong>
                       </mat-error>
+                    </mat-form-field> -->
+                  
+                    <mat-form-field class="example-full-width" >
+                      <mat-label>Fecha de naciemiento</mat-label>
+                      <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
+
+                   
                   </div>
                 </div>
                 <div class="form-group col-md-6">
@@ -252,7 +261,10 @@
         </div>
         <div class="card-footer text-muted text-right">
           <p>Total:</p>
-          <h5 class="text-success "> {{ carritoServ.costoTotal | currency: 'USD' }} </h5>
+          <h5 class="text-success "> {{ carritoServ.costoTotal | currency: 'USD' }} <small>MXP</small></h5>
+          <small class="text-muted text-small">
+            IVA Incluido
+          </small>
         </div>
       </div>
     </div>
