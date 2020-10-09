@@ -4503,7 +4503,7 @@
       padding-left: 0;
     }
   }
-  
+/*   
   @media (min-width: 576px) {
     .navbar-expand-sm {
       -webkit-box-orient: horizontal;
@@ -4590,7 +4590,7 @@
     .navbar-expand-md .navbar-toggler {
       display: none;
     }
-  }
+  } */
   
   @media (max-width: 991.98px) {
     .navbar-expand-lg > .container,
