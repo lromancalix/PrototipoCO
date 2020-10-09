@@ -10856,7 +10856,7 @@
     display: none;
   }
   
-  .sidebar .nav-item.dropdown .dropdown-toggle::after,
+  /* .sidebar .nav-item.dropdown .dropdown-toggle::after,
   .topbar .nav-item.dropdown .dropdown-toggle::after {
     width: 1rem;
     text-align: center;
@@ -10867,11 +10867,11 @@
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
   }
-  
+   
   .sidebar .nav-item.dropdown.show .dropdown-toggle::after,
   .topbar .nav-item.dropdown.show .dropdown-toggle::after {
     content: '\f107';
-  }
+  }*/
   
   .sidebar .nav-item .nav-link,
   .topbar .nav-item .nav-link {
