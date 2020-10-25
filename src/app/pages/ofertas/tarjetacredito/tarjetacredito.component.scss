@@ -1,9 +1,11 @@
 .content {
     margin-top: 5%;
+    padding: 5%;
 }
 
-@media screen and ( min-width: 200px ) {
+@media screen and ( max-width: 400px ) {
     .content {
-        margin-top: 10% !important;
+        margin-top: 20% !important;
+        padding: 10%;
     }
 }
