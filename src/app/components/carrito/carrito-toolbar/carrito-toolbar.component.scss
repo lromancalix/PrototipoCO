@@ -1,0 +1,37 @@
+/* eSTO NO VA
+  .sidebar .nav-item.dropdown .dropdown-toggle::after,
+  .topbar .nav-item.dropdown .dropdown-toggle::after {
+    width: 1rem;
+    text-align: center;
+    float: right;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+  } 
+   
+  .sidebar .nav-item.dropdown.show .dropdown-toggle::after,
+  .topbar .nav-item.dropdown.show .dropdown-toggle::after {
+    content: '\f107';
+  }
+ 
+  .topbar {
+    height: 4.375rem;
+  }
+  
+  .topbar #sidebarToggleTop {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  
+  .topbar #sidebarToggleTop:hover {
+    background-color: #eaecf4;
+  }
+  
+  .topbar #sidebarToggleTop:active {
+    background-color: #dddfeb;
+  }
+
+  */
+  

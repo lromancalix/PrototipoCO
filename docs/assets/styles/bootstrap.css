@@ -6772,7 +6772,7 @@
     background-color: #bd2130 !important;
   }
   
-  .bg-light {
+  .bg-light-bootstrap {
     background-color: #f8f9fa !important;
   }
   
@@ -6783,9 +6783,7 @@
   }
   
   .bg-dark {
-    background-color: /*for the Technologic Institute Of Chetumal.
-
-*/ !important;
+    background-color: black !important;
   }
   
   a.bg-dark:hover, a.bg-dark:focus,
