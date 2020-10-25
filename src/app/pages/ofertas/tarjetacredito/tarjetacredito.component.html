@@ -1,49 +1,55 @@
-<div class="content" style="margin-top: 5% !important">
-  <div class="row mt-5 p-5">
-    <div class="col">
-      <!-- INGRESO MENSUAL -->
-      <mat-card class="mb-3">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="credit-text-color-primary">Tarjetas de Crédito</h4>
-            <hr />
-            <span class="bd-content-title mb-5">
-              Selecciona tu ingreso mensual y las tarjetas de crédito que deseas
-              solicitar y da click en Continuar.
-            </span>
-          </div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="content" style="margin-top: 5% !important">
+      <div class="row mt-5 p-5">
+        <div class="col">
+          <!-- INGRESO MENSUAL -->
+          <mat-card class="mb-3">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="credit-text-color-primary">Tarjetas de Crédito</h4>
+                <hr />
+                <span class="bd-content-title mb-5">
+                  Selecciona tu ingreso mensual y las tarjetas de crédito que deseas
+                  solicitar y da click en Continuar.
+                </span>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-2 col-sm-12">
+               
+                  <h3 class="credit-text-color-primary">
+                    {{ ingreso | currency: "USD" }}
+                  </h3>
+                
+              </div>
+              <div class="col-md-10 col-sm-12">
+                <mat-slider
+                  thumbLabel
+                  [displayWith]="formatLabel"
+                  tickInterval="1000"
+                  min="1000"
+                  max="50000"
+                  class="w-100"
+                  (input)="valorSlider($event)"
+                ></mat-slider>
+              </div>
+            </div>
+          </mat-card>
+          <!--/ INGRESO MENSUAL -->
         </div>
-        <div class="row mt-5">
-          <div class="col-md-2 col-sm-12">
-           
-              <h3 class="credit-text-color-primary">
-                {{ ingreso | currency: "USD" }}
-              </h3>
-            
-          </div>
-          <div class="col-md-10 col-sm-12">
-            <mat-slider
-              thumbLabel
-              [displayWith]="formatLabel"
-              tickInterval="1000"
-              min="1000"
-              max="50000"
-              class="w-100"
-              (input)="valorSlider($event)"
-            ></mat-slider>
-          </div>
-        </div>
-      </mat-card>
-      <!--/ INGRESO MENSUAL -->
+      </div>
     </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let tarjeta of tarjetas">
+          <app-tarjetav2 [tarjeta]="tarjeta"></app-tarjetav2>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-4" *ngFor="let tarjeta of tarjetas">
-      <app-tarjetav2 [tarjeta]="tarjeta"></app-tarjetav2>
-      <!-- <app-tarjeta [tarjeta]="tarjeta"></app-tarjeta> -->
-    </div>
-  </div>
-</div>
+
